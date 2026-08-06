@@ -11,13 +11,13 @@ int main() {
 
     for (int i = 0; i < n; i++) cin >> a[i];
 
-    int ans = 0, c = 1;
+    int ans = 1, c = 1;
 
     for (int i = 1; i < n; i++) {
         if (a[i] >= a[i - 1]) {
             c++;
-        } else {
             ans = max(ans, c);
+        } else {
             c = 1;
         }
     }
